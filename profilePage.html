@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="syles.css" />
+
+
+
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main profile container */
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-item {
+            margin-bottom: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .value {
+            margin-top: 3px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 6px;
+        }
+
+        .logout-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            background: #dc3545;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+
+        .logout-btn:hover {
+            background: #b52a36;
+        }
+    </style>
+
+  </head>
+ 
+ 
+  <body>
+    <!-- Navbar for both mobile and desktop versions -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"><i class="fas fa-gem"></i>SRC Solutions</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="ticket_form.html" class="navbar__links">Submit a ticket</a>
+          </li>
+          <li class="navbar__item">
+            <a href="profile.php" class="navbar__links">Profile Settings</a>
+          </li>
+          
+          <li class="navbar__item">
+            <a href="adminDashboard.php" class="navbar__links">Administrators Dashboard</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+
+    <div class="container">
+    <h2>Your Profile</h2>
+
+    <!-- Username -->
+    <div class="profile-item">
+        <div class="label">Username</div>
+        <div class="value">{{USERNAME}}</div>
+    </div>
+
+    <!-- Email -->
+    <div class="profile-item">
+        <div class="label">Email Address</div>
+        <div class="value">{{EMAIL}}</div>
+    </div>
+
+    <!-- Role -->
+    <div class="profile-item">
+        <div class="label">Role</div>
+        <div class="value">{{ROLE}}</div>
+    </div>
+
+    <!-- Account creation date -->
+    <div class="profile-item">
+        <div class="label">Account Created</div>
+        <div class="value">{{CREATED_AT}}</div>
+    </div>
+
+    <!-- Logout button -->
+    <a class="logout-btn" href="logout.php">Log Out</a>
+</div>
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+            <a href="/">Careers</a> <a href="/">Investments</a>
+            <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a> <a href="/">Support</a>
+            <a href="/">Destinations</a> <a href="/">Sponsorships</a>
+          </div>
+        </div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
+            <a href="/">Agency</a> <a href="/">Influencer</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a> <a href="/">Facebook</a>
+            <a href="/">Youtube</a> <a href="/">Twitter</a>
+          </div>
+        </div>
+      </div>
+      
+      
+
+          <div class="footer__logo">
+            <a href="/" id="footer__logo"><i class="fas fa-gem"></i>SRC Solutions</a>
+          </div>
+          <p class="website__rights">© SRC Solutions 2025. All rights reserved</p>
+         
+      
+        </div>
+      </section>
+    </div>
+    
+
+
+
+    <!-- Link to JavaScript file for the "navbar__toggle" which is the mobile menu  -->
+    <script src="app.js"></script>
+  </body>
+</html>

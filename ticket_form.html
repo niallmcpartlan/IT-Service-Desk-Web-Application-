@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Submission Form</title>
+    
+    
+    <link rel="stylesheet" href="syles.css" />
+
+
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main form container */
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Label styling */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        /* Input, textarea, dropdown styling */
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical; /* Allows vertical resizing only */
+        }
+
+        /* Submit button styling */
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Back link styling */
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+     <!-- Navbar for both mobile and desktop versions -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"><i class="fas fa-gem"></i>SRC Solutions</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="ticket_form.html" class="navbar__links">Submit a ticket</a>
+          </li>
+          <li class="navbar__item">
+            <a href="profile.php" class="navbar__links">Profile Settings</a>
+          </li>
+          
+          <li class="navbar__item">
+            <a href="adminDashboard.php" class="navbar__links">Administrators Dashboard</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+
+    
+    <!-- Ticket Submission Form -->
+
+
+        <div class="container">
+    <h2>Create a Support Ticket</h2>
+
+    <!-- Ticket submission form -->
+    <form action="ticket_submit.php" method="POST">
+
+        <!-- Ticket title input -->
+        <label for="title">Ticket Title</label>
+        <input type="text" id="title" name="title" required>
+
+        <!-- Ticket description input -->
+        <label for="description">Ticket Description</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <!-- Priority dropdown -->
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <!-- Category dropdown -->
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+    <option value="Hardware">Hardware</option>
+    <option value="Software">Software</option>
+    <option value="Other">Other (please specify in description)</option>
+</select>
+
+
+        <!-- Submit button -->
+        <button type="submit" class="submit-btn">Submit Ticket</button>
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+            <a href="/">Careers</a> <a href="/">Investments</a>
+            <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a> <a href="/">Support</a>
+            <a href="/">Destinations</a> <a href="/">Sponsorships</a>
+          </div>
+        </div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
+            <a href="/">Agency</a> <a href="/">Influencer</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a> <a href="/">Facebook</a>
+            <a href="/">Youtube</a> <a href="/">Twitter</a>
+          </div>
+        </div>
+      </div>
+      
+      
+
+          <div class="footer__logo">
+            <a href="/" id="footer__logo"><i class="fas fa-gem"></i>SRC Solutions</a>
+          </div>
+          <p class="website__rights">© SRC Solutions 2025. All rights reserved</p>
+         
+      
+        </div>
+      </section>
+    </div>
+    
+
+    <!-- Link to JavaScript file for the "navbar__toggle" which is the mobile menu  -->
+    <script src="app.js"></script>
+</body>
+</html>

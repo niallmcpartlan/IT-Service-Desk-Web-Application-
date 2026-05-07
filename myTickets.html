@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Submitted Tickets</title>
+    <link rel="stylesheet" href="syles.css" />
+
+
+
+   <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Table layout */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        /* Table cells */
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        /* Table header styling */
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Row hover effect */
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        /* Links inside table */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back button styling */
+        .back-btn {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+
+  </head>
+ 
+ 
+  <body>
+    <!-- Navbar for both mobile and desktop versions -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"><i class="fas fa-gem"></i>SRC Solutions</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="ticket_form.html" class="navbar__links">Submit a ticket</a>
+          </li>
+          <li class="navbar__item">
+            <a href="profile.php" class="navbar__links">Profile Settings</a>
+          </li>
+          
+          <li class="navbar__item">
+            <a href="adminDashboard.php" class="navbar__links">Administrators Dashboard</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+
+    <div class="container">
+    <h2>My Tickets</h2>
+
+    <!-- Ticket table header -->
+    <table>
+        <tr>
+            <th>Title</th>        <!-- Ticket title -->
+            <th>Status</th>       <!-- Open / Closed -->
+            <th>Priority</th>     <!-- Low / Medium / High -->
+            <th>Category</th>     <!-- Technical / Billing / General -->
+            <th>Created</th>      <!-- Date submitted -->
+            <th>Action</th>       <!-- View button -->
+        </tr>
+
+        <!-- Dynamic ticket rows inserted by PHP -->
+      {{TICKET_ROWS}}
+    </table>
+</div>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+            <a href="/">Careers</a> <a href="/">Investments</a>
+            <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a> <a href="/">Support</a>
+            <a href="/">Destinations</a> <a href="/">Sponsorships</a>
+          </div>
+        </div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
+            <a href="/">Agency</a> <a href="/">Influencer</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a> <a href="/">Facebook</a>
+            <a href="/">Youtube</a> <a href="/">Twitter</a>
+          </div>
+        </div>
+      </div>
+      
+      
+
+          <div class="footer__logo">
+            <a href="/" id="footer__logo"><i class="fas fa-gem"></i>SRC Solutions</a>
+          </div>
+          <p class="website__rights">© SRC Solutions 2025. All rights reserved</p>
+         
+      
+        </div>
+      </section>
+    </div>
+    
+
+    <!-- Link to JavaScript file for the "navbar__toggle" which is the mobile menu  -->
+    <script src="app.js"></script>
+</body>
+</html>
