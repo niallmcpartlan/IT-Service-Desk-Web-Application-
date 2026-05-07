@@ -7,6 +7,7 @@ The application was developed using a LAMP‑style architecture (XAMPP, PHP, SQL
 
 Key Features
 For Staff (End Users)
+
 Secure login and session management
 
 Submit new support tickets with issue details
@@ -18,6 +19,7 @@ Receive automated email notifications for updates
 Access a file repository of user guides and documentation
 
 For IT Staff (Admin Portal)
+
 Role‑based authentication and access control
 
 Assign, update, and manage support tickets
